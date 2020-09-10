@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>basic0001.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.s4 { color: #808080;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+basic0001.py</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">from </span><span class="s1">cv2 </span><span class="s0">import </span><span class="s1">*;</span>
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s1">img=imread(</span><span class="s2">&quot;C:</span><span class="s0">\\</span><span class="s2">Users</span><span class="s0">\\</span><span class="s2">HP</span><span class="s0">\\</span><span class="s2">PycharmProjects</span><span class="s0">\\</span><span class="s2">Image_processing</span><span class="s0">\\</span><span class="s2">venv</span><span class="s0">\\</span><span class="s2">image</span><span class="s0">\\</span><span class="s2">opencvlogo.png&quot;</span><span class="s0">,</span><span class="s3">1</span><span class="s1">)</span>
+<a name="l4"><span class="ln">4    </span></a><span class="s1">img_gray=imread(</span><span class="s2">&quot;C:</span><span class="s0">\\</span><span class="s2">Users</span><span class="s0">\\</span><span class="s2">HP</span><span class="s0">\\</span><span class="s2">PycharmProjects</span><span class="s0">\\</span><span class="s2">Image_processing</span><span class="s0">\\</span><span class="s2">venv</span><span class="s0">\\</span><span class="s2">image</span><span class="s0">\\</span><span class="s2">opencvlogo.png&quot;</span><span class="s0">,</span><span class="s3">0</span><span class="s1">)</span>
+<a name="l5"><span class="ln">5    </span></a><span class="s1">img_hsv=imread(</span><span class="s2">&quot;C:</span><span class="s0">\\</span><span class="s2">Users</span><span class="s0">\\</span><span class="s2">HP</span><span class="s0">\\</span><span class="s2">PycharmProjects</span><span class="s0">\\</span><span class="s2">Image_processing</span><span class="s0">\\</span><span class="s2">venv</span><span class="s0">\\</span><span class="s2">image</span><span class="s0">\\</span><span class="s2">opencvlogo.png&quot;</span><span class="s0">,</span><span class="s1">COLOR_BGR2HSV)</span>
+<a name="l6"><span class="ln">6    </span></a><span class="s1">imshow(</span><span class="s2">&quot;Colored images&quot;</span><span class="s0">,</span><span class="s1">img)</span>
+<a name="l7"><span class="ln">7    </span></a><span class="s1">imshow(</span><span class="s2">&quot;Gray Image&quot;</span><span class="s0">,</span><span class="s1">img_gray)</span>
+<a name="l8"><span class="ln">8    </span></a><span class="s1">imshow(</span><span class="s2">&quot;HSV Imege&quot;</span><span class="s0">,</span><span class="s1">img_hsv)</span>
+<a name="l9"><span class="ln">9    </span></a><span class="s1">waitKey(</span><span class="s3">0</span><span class="s1">) </span><span class="s4">#waits till you press any key</span>
+<a name="l10"><span class="ln">10   </span></a><span class="s1">destroyAllWindows()</span>
+<a name="l11"><span class="ln">11   </span></a></pre>
+</body>
+</html>

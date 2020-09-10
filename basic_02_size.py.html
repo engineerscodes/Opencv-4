@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>basic_02_size.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+basic_02_size.py</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">from </span><span class="s1">cv2 </span><span class="s0">import </span><span class="s1">*;</span>
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s1">img=imread(</span><span class="s2">&quot;C:</span><span class="s0">\\</span><span class="s2">Users</span><span class="s0">\\</span><span class="s2">HP</span><span class="s0">\\</span><span class="s2">PycharmProjects</span><span class="s0">\\</span><span class="s2">Image_processing</span><span class="s0">\\</span><span class="s2">venv</span><span class="s0">\\</span><span class="s2">image</span><span class="s0">\\</span><span class="s2">Elon-Musk-2010.jpg&quot;</span><span class="s1">)</span>
+<a name="l4"><span class="ln">4    </span></a><span class="s1">print(img.shape) </span><span class="s3">#1600=colum and 1342 is rows and channels is 3</span>
+<a name="l5"><span class="ln">5    </span></a><span class="s1">img_gray=imread(</span><span class="s2">'C:</span><span class="s0">\\</span><span class="s2">Users</span><span class="s0">\\</span><span class="s2">HP</span><span class="s0">\\</span><span class="s2">PycharmProjects</span><span class="s0">\\</span><span class="s2">Image_processing</span><span class="s0">\\</span><span class="s2">venv</span><span class="s0">\\</span><span class="s2">image</span><span class="s0">\\</span><span class="s2">Elon-Musk-2010.jpg'</span><span class="s0">,</span><span class="s4">0</span><span class="s1">)</span>
+<a name="l6"><span class="ln">6    </span></a><span class="s1">print(img_gray.shape) </span><span class="s3">#1600=colum and 1342 is rows and channels is 0 because of grayScale image.</span>
+<a name="l7"><span class="ln">7    </span></a><span class="s1">img_hsv=imread(</span><span class="s2">&quot;C:</span><span class="s0">\\</span><span class="s2">Users</span><span class="s0">\\</span><span class="s2">HP</span><span class="s0">\\</span><span class="s2">PycharmProjects</span><span class="s0">\\</span><span class="s2">Image_processing</span><span class="s0">\\</span><span class="s2">venv</span><span class="s0">\\</span><span class="s2">image</span><span class="s0">\\</span><span class="s2">Elon-Musk-2010.jpg&quot;</span><span class="s0">,</span><span class="s1">COLOR_RGB2HSV)</span>
+<a name="l8"><span class="ln">8    </span></a><span class="s1">print(img_hsv.shape) </span><span class="s3">#the size (336,400) changes but channel is 3 output is (400,336,3)(rol=336,col=400)</span>
+<a name="l9"><span class="ln">9    </span></a><span class="s1">print(img.dtype)</span>
+<a name="l10"><span class="ln">10   </span></a><span class="s1">print(img_gray.dtype)</span>
+<a name="l11"><span class="ln">11   </span></a><span class="s1">print(img_hsv.dtype) </span><span class="s3">#all r unit 8 image</span>
+<a name="l12"><span class="ln">12   </span></a><span class="s1">img=cv2.resize(img</span><span class="s0">,</span><span class="s1">(</span><span class="s4">336</span><span class="s0">,</span><span class="s4">400</span><span class="s1">)) </span><span class="s3"># resizing image because its to big(1600,1342)</span>
+<a name="l13"><span class="ln">13   </span></a><span class="s1">img_gray=resize(img_gray</span><span class="s0">,</span><span class="s1">(</span><span class="s4">336</span><span class="s0">,</span><span class="s4">400</span><span class="s1">))  </span><span class="s3">#(y,x)</span>
+<a name="l14"><span class="ln">14   </span></a><span class="s1">imshow(</span><span class="s2">&quot;Image of Elon Musk&quot;</span><span class="s0">,</span><span class="s1">img)</span>
+<a name="l15"><span class="ln">15   </span></a><span class="s1">waitKey(</span><span class="s4">100</span><span class="s1">)</span>
+<a name="l16"><span class="ln">16   </span></a><span class="s3">#destroyAllWindows()  if u remove this the windows will gwt destroyed after 100 mili second</span>
+<a name="l17"><span class="ln">17   </span></a><span class="s1">imshow(</span><span class="s2">&quot;Grayscale image of Musk&quot;</span><span class="s0">,</span><span class="s1">img_gray)</span>
+<a name="l18"><span class="ln">18   </span></a><span class="s1">waitKey(</span><span class="s4">100</span><span class="s1">)</span>
+<a name="l19"><span class="ln">19   </span></a><span class="s3">#destroyAllWindows()</span>
+<a name="l20"><span class="ln">20   </span></a><span class="s1">imshow(</span><span class="s2">&quot;HSV IMAGE OF ELON MUSK  &quot;</span><span class="s0">,</span><span class="s1">img_hsv)</span>
+<a name="l21"><span class="ln">21   </span></a><span class="s1">waitKey(</span><span class="s4">0</span><span class="s1">)  </span><span class="s3">#it will not destroy img,img_hsv windows after 100 mili sec and its destroy when u press any key due to waitkey(0)</span>
+<a name="l22"><span class="ln">22   </span></a><span class="s1">destroyAllWindows()</span></pre>
+</body>
+</html>
