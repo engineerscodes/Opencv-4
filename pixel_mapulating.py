@@ -1,6 +1,6 @@
 from cv2 import *
 img=imread("C:\\Users\\HP\\PycharmProjects\\Image_processing\\venv\image\\elon_musk_tesla_3036.jpg")
-#opencv by default is RGB but stores BGR
+#opencv by default is BGR
 img=resize(img,(400,336))
 (b,g,r)=img[45,45]
 print(b,g,r)
