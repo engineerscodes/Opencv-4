@@ -8,7 +8,7 @@ cap=VideoCapture(0)
 
 while True:
     reg,frame=cap.read()
-    if reg is None:
+    if reg ==False:
         break
     cv2.imshow("OUPUT IMAGE",frame)
     if cv2.waitKey(100) & 0xFF==ord('q'):

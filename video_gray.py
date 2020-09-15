@@ -17,5 +17,6 @@ while (True):
     imshow("displaying HSV IMAGE -->", img_hsv)
     if waitKey(100) & 0xFF==ord('q'):
         break;
+    
 cap.release()
 destroyAllWindows()
