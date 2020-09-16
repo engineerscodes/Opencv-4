@@ -9,7 +9,7 @@ while True:
     check,frame=cap.read()
     if check is True:
         back=cvtColor(frame,COLOR_BGR2GRAY)
-        back=cv2.resize(back, (1020,1020))#VideoWriter('naveen.avi',fourcc,int(30),(1020,1020),False) both frame size and video cap size must be same
+        back=cv2.resize(back, (1020,1020))#VideoWriter('naveen.avi',fourcc,int(30),(1020,1020),False) both frame size and video cap size must be same as frame size;
         imshow("video",back)
         gray.write(back)
         if waitKey(100) & 0xFF==ord('q'):
