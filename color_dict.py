@@ -17,6 +17,6 @@ def colors():
     return color
 
 if __name__ == '__main__':
-   color= colors()
-   print(color.get('green'))
-   print(color['cyan'])
+   colo= colors()
+   print(colo.get('green'))
+   print(colo['ligth_gray'])
