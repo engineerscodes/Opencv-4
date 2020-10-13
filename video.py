@@ -4,7 +4,7 @@ from cv2 import *
 arg=argparse.ArgumentParser()
 arg.add_argument("--input",help="enter video path",default=0)
 args=vars(arg.parse_args())
-cap=VideoCapture(0)
+cap=VideoCapture(args["input"])
 
 while True:
     reg,frame=cap.read()
